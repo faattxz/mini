@@ -1,0 +1,402 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 5vw;
+    background-color: #fff;
+    margin-right: 5vw;
+}
+
+nav img {
+    height: 5em;
+    margin-left: 3vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    gap: 2.5vw;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: .6em;
+}
+
+nav ul li a.active {
+    color: red;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+section:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin: 0;
+    background-color: rgb(191, 180, 200);
+}
+
+section:nth-of-type(1) article {
+    max-width: 40em;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+section:nth-of-type(1) h1 {
+    font-size: 6.25em;
+    color: white;
+    margin-bottom: 1vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: .9em;
+}
+
+section:nth-of-type(1) p {
+    font-size: 1em;
+    color: white;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+section:nth-of-type(1) img {
+    width: 40vw;
+    height: 40vw;
+    position: relative;
+    bottom: -2vw;
+    /*met behulp van chatgpt*/
+}
+
+#bekijk-producten {
+    padding: 0.7em 2em;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1em;
+    border-radius: 2em;
+}
+
+#bekijk-producten:hover {
+    background-color: lightgray;
+}
+
+#bekijk-alle-producten {
+    padding: 0.7em 2em;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2em;
+    margin-top: 1.5em;
+}
+
+#bekijk-alle-producten:hover {
+    background-color: darkred;
+}
+
+#meer-informatie {
+    padding: 0.7em 2em;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2em;
+    margin-top: 1.5em;
+}
+
+section:nth-of-type(2) {
+    text-align: center;
+    padding: 3em 0;
+}
+
+section:nth-of-type(2) h2 {
+    font-size: 3em;
+    color: #D72B2B;
+    margin-bottom: 2em;
+}
+
+#carousel {
+    display: flex;
+    gap: 2em;
+    overflow-x: hidden;
+    padding: 2em 0;
+    background-color: white;
+}
+
+#carousel li {
+    flex: 0 0 20vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel img {
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+    border-radius: 50%;  
+}
+
+ul:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+    list-style: none;
+    /*met behulp van chatgpt*/
+}
+
+ul:nth-of-type(1) img {
+    width: 21em;
+    height: 21em;
+    object-fit: fil;
+}
+
+section:nth-of-type(3) {
+    text-align: center;
+    padding: 3em 0;
+    margin-left: 3em;
+    margin-right: 5.5em;
+}
+
+section:nth-of-type(3) h2 {
+    font-size: 1.5em;
+    color: #D72B2B;
+    margin-bottom: .5em;
+}
+
+section:nth-of-type(3) ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*met behulp van chatgpt en MDN*/
+    gap: 1.5em;
+    justify-items: start;
+    list-style: none;
+}
+
+section:nth-of-type(3) ul li {
+    width: 30vw;
+    padding: 1.5em;
+    background-color: #f0f0f0;
+    border-radius: 1em;
+}
+
+section:nth-of-type(3) ul li h2 {
+    color: red;
+}
+
+section:nth-of-type(3) ul li p {
+    color: black;
+    margin: 0.5em 0;
+}
+
+@media (max-width: 768px) {
+    section:nth-of-type(3) ul {
+        grid-template-columns: 1fr;
+    }
+} /*met behulp van chatgpt en MDN*/
+
+section:nth-of-type(4) {
+    background-color: red;
+    padding: 3em 5vw;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(4) h1,
+section:nth-of-type(4) h3 {
+    max-width: 50%;
+}
+
+section:nth-of-type(4) form {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+section:nth-of-type(4) form label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+@media (max-width: 768px) {
+    section:nth-of-type(4) {
+        flex-direction: column;
+    }
+
+    section:nth-of-type(4) h1,
+    section:nth-of-type(4) h3 {
+        max-width: 100%;
+    }
+
+    section:nth-of-type(4) form {
+        max-width: 100%;
+    } /*met behulp van chatgpt en MDN*/
+}
+
+section:nth-of-type(4) form button {
+    padding: 0.7em 2em;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+section:nth-of-type(4) form button span {
+    margin-left: 1em;
+}
+
+ul:nth-of-type(2) {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul:nth-of-type(2) li {
+    margin-right: 1em;
+}
+
+ul:nth-of-type(2) li:last-child {
+    margin-right: 0;
+}
+
+ul:nth-of-type(2) img {
+    width: 110%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    ul:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 3em 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer nav ul,
+footer address ul,
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+footer nav ul {
+    flex-direction: row;
+    /*met behulp van chatgpt*/
+}
+
+footer address ul {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+
+    footer address ul {
+        text-align: center;
+    }
+}
+
+footer img {
+    height: 3em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: lightgray;
+}
+    /* jouw code */
+
